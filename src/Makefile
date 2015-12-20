@@ -13,6 +13,7 @@ EUSHIELD= \
 install: infthesis.cls
 	@mkdir -v -p $(TEXINFTHESIS) && \
 	cp -v infthesis.cls $(TEXINFTHESIS)/ && \
+	texhash $(TEXMF) && \
 	echo "Installation complete." || echo "Installation failed."
 
 install-eushield: infthesis.cls
@@ -22,3 +23,4 @@ install-eushield: infthesis.cls
 		curl -o $(TEXEUSHIELD)/$(dep) -O $(EUSHIELDURL)/$(dep) && \
 		echo "Installation of $(dep) complete." || echo "Installation of $(dep) failed." ; \
 	)
+	texhash $(TEXMF)

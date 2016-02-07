@@ -8,7 +8,7 @@ The document class requires the following packages:
  * xspace
  * eushield
  
-where *eushield* is the only nonstandard LaTeX package. The package provide various versions of the university's crest. The [eushield][eushield.sty] package is not distributed along with this class. 
+where *eushield* is the only nonstandard LaTeX package. The package provides various versions of the university's crest. The [eushield][eushield.sty] package is not distributed along with this class. 
 
 You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty). You must also obtain the following necessary copies of the university crest:
 * eushield-normal.[[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.pdf)][[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.ps)]

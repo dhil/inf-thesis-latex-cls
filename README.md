@@ -20,6 +20,17 @@ You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/pr
 **Note** all usage of the university's crest or logos is subject to the [brand guidelines](http://www.ed.ac.uk/communications-marketing/resources/university-brand). Make sure you follow the brand guidelines!
 
 ## Local installation
-To be written...
+
+To install the thesis class file:
+
+`make install`
+
+To install the crest and logos:
+
+`make install-eushield`
+
+Both above commands will place all the relevant files under a `.texmf` directory in the current user's `HOME` directory
+and will also invoke `texhash` in order to update the search paths.
+
 
 [eushield.sty]: http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty

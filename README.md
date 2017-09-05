@@ -21,16 +21,28 @@ You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/pr
 
 ## Local installation
 
-To install the thesis class file:
+## Usimg `make`
+
+To install the thesis class file (in the `src` dir):
 
 `make install`
 
-To install the crest and logos:
+To install the crest and logos (in the `src` dir):
 
 `make install-eushield`
 
 Both above commands will place all the relevant files under a `.texmf` directory in the current user's `HOME` directory
 and will also invoke `texhash` in order to update the search paths.
+
+## Using `cmake`
+
+- mkdir `build` && cd `build`
+- cmake `[path to this source dir]`-DCMAKE_INSTALL_PREFIX=`path to install dir`
+- make && make install
+- texhash `path to install dir`
+
+To match the `make` based installation, `texhash` must be invoked manually, but it allows for greater flexibility on the
+selection of the target directory.
 
 
 [eushield.sty]: http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty

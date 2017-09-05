@@ -2,6 +2,8 @@
 
 include(CMakeParseArguments)
 
+set(_UOE_INFTHESIS_CURRENT_DIR "${CMAKE_CURRENT_LIST_DIR}/src")
+
 #.rst:
 # This creates targets that install the LaTeX class for an University of
 # Edinburgh, School of Informatics thesis class (infthesis) along with the
@@ -92,7 +94,7 @@ function(add_uoe_infthesis)
   set(INF_DIR "${UOE_DIR}/informatics")
 
   set(INFTHESIS_FILE "infthesis.cls")
-  set(INFTHESIS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${INFTHESIS_FILE}")
+  set(INFTHESIS_PATH "${_UOE_INFTHESIS_CURRENT_DIR}/${INFTHESIS_FILE}")
 
   set(INFTHESIS_DIR "${INF_DIR}/infthesis")
   set(INFTHESIS_DEST_PATH "${INFTHESIS_DIR}/${INFTHESIS_FILE}")

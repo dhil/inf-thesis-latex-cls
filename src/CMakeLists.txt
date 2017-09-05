@@ -1,11 +1,12 @@
 # cmake file
 
-set(UOE_DIR "uoe/informatics/")
+set(UOE_DIR "uoe")
+set(INF_DIR "${UOE_DIR}/informatics")
 
 
 # setup logos
 
-set(EUSHIELD_DIR "${CMAKE_CURRENT_BINARY_DIR}/${UOE_DIR}/eushield")
+set(EUSHIELD_DIR "${CMAKE_CURRENT_BINARY_DIR}/${INF_DIR}/eushield")
 file(MAKE_DIRECTORY ${EUSHIELD_DIR})
 
 set(EUSHIELD_URL
@@ -45,7 +46,7 @@ add_custom_target(uoe-eushield ALL
 set(INFTHESIS_FILE "infthesis.cls")
 set(INFTHESIS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${INFTHESIS_FILE}")
 
-set(INFTHESIS_DIR "${UOE_DIR}/infthesis")
+set(INFTHESIS_DIR "${INF_DIR}/infthesis")
 set(INFTHESIS_DEST_PATH "${INFTHESIS_DIR}/${INFTHESIS_FILE}")
 file(MAKE_DIRECTORY ${INFTHESIS_DIR})
 
@@ -59,4 +60,9 @@ add_custom_command(
 
 add_custom_target(uoe-infthesis ALL
   DEPENDS ${INFTHESIS_DEST_PATH})
+
+
+# installation
+
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${UOE_DIR} DESTINATION .)
 

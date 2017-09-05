@@ -3,7 +3,7 @@ TEXINFTHESIS=$(TEXMF)/uoe/informatics/infthesis
 TEXEUSHIELD=$(TEXMF)/uoe/informatics/eushield
 EUSHIELDURL=http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos
 EUSHIELD= \
-	eushield.sty \
+	eushield.sty eushield.eps \
 	eushield-normal.pdf eushield-normal.ps \
 	eushield-noback.pdf eushield-noback.ps \
 	eushield-reversed.pdf eushield-reversed.ps \

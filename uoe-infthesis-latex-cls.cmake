@@ -48,6 +48,7 @@ function(add_uoe_eushield)
 
   set(EUSHIELD_LOGOS)
   list(APPEND EUSHIELD_LOGOS eushield.sty)
+  list(APPEND EUSHIELD_LOGOS eushield.eps)
   list(APPEND EUSHIELD_LOGOS eushield-normal.pdf)
   list(APPEND EUSHIELD_LOGOS eushield-normal.ps)
   list(APPEND EUSHIELD_LOGOS eushield-noback.pdf)

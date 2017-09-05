@@ -1,7 +1,5 @@
 # cmake file
 
-#
-
 set(UOE_DIR "uoe/informatics/")
 
 
@@ -26,9 +24,20 @@ list(APPEND EUSHIELD_LOGOS eushield-twocolour.ps)
 list(APPEND EUSHIELD_LOGOS eushield-fullcolour.pdf)
 list(APPEND EUSHIELD_LOGOS eushield-fullcolour.ps)
 
+set(DOWNLOAD_SCRIPT "${CMAKE_CURRENT_BINARY_DIR}/download.cmake")
+set(EUSHIELD_DEST_LOGOS)
 foreach(logo ${EUSHIELD_LOGOS})
-  file(DOWNLOAD ${EUSHIELD_URL}/${logo} ${EUSHIELD_DIR}/${logo})
+  file(APPEND ${DOWNLOAD_SCRIPT} 
+    "file(DOWNLOAD ${EUSHIELD_URL}/${logo} ${EUSHIELD_DIR}/${logo})\n")
+  list(APPEND EUSHIELD_DEST_LOGOS ${EUSHIELD_DIR}/${logo})
 endforeach()
+
+add_custom_command(
+  OUTPUT ${EUSHIELD_DEST_LOGOS}
+  COMMAND ${CMAKE_COMMAND} -P ${DOWNLOAD_SCRIPT})
+
+add_custom_target(uoe-eushield ALL
+  DEPENDS ${EUSHIELD_DEST_LOGOS})
 
 
 # setup latex class file
@@ -43,7 +52,8 @@ file(MAKE_DIRECTORY ${INFTHESIS_DIR})
 file(TO_NATIVE_PATH ${INFTHESIS_PATH} INFTHESIS_NPATH)
 file(TO_NATIVE_PATH ${INFTHESIS_DEST_PATH} INFTHESIS_DEST_NPATH)
 
-add_custom_command(OUTPUT ${INFTHESIS_DEST_PATH}
+add_custom_command(
+  OUTPUT ${INFTHESIS_DEST_PATH}
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
   ${INFTHESIS_NPATH} ${INFTHESIS_DEST_NPATH})
 

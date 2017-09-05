@@ -44,5 +44,9 @@ and will also invoke `texhash` in order to update the search paths.
 To match the `make` based installation, `texhash` must be invoked manually, but it allows for greater flexibility on the
 selection of the target directory.
 
+Moreover, the `cmake` file `uoe-infthesis-latex-cls.cmake` allows the integration of this repository as a submodule, 
+allowing the creation of targets with the relevant files as shown in this project's `CMakeLists.txt` file. The handling
+of the paths for LaTeX will still need to be handled separately.
+
 
 [eushield.sty]: http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty

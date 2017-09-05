@@ -35,7 +35,7 @@ function(add_uoe_eushield)
       "add_uoe_eushield() requires a target name by using the TARGET option")
   endif()
 
-  set(UOE_DIR "${ADD_UOE_EUSHIELD_TARGET}/uoe")
+  set(UOE_DIR "${ADD_UOE_EUSHIELD_TARGET}/tex/latex/uoe")
   set(INF_DIR "${UOE_DIR}/informatics")
 
   # setup logos
@@ -90,7 +90,7 @@ function(add_uoe_infthesis)
       "add_uoe_infthesis() requires a target name by using the TARGET option")
   endif()
 
-  set(UOE_DIR "${ADD_UOE_INFTHESIS_TARGET}/uoe")
+  set(UOE_DIR "${ADD_UOE_INFTHESIS_TARGET}/tex/latex/uoe")
   set(INF_DIR "${UOE_DIR}/informatics")
 
   set(INFTHESIS_FILE "infthesis.cls")

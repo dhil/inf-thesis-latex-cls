@@ -1,6 +1,6 @@
 TEXMF=$(HOME)/.texmf/tex/latex
-TEXINFTHESIS=$(TEXMF)/informatics/infthesis
-TEXEUSHIELD=$(TEXMF)/informatics/eushield
+TEXINFTHESIS=$(TEXMF)/uoe/informatics/infthesis
+TEXEUSHIELD=$(TEXMF)/uoe/informatics/eushield
 EUSHIELDURL=http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos
 EUSHIELD= \
 	eushield.sty \

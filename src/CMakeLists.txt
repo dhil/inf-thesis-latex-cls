@@ -13,6 +13,6 @@ add_uoe_infthesis(TARGET my-infthesis)
 
 # installation
 
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/my-eushield/uoe DESTINATION .)
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/my-infthesis/uoe DESTINATION .)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/my-eushield/ DESTINATION .)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/my-infthesis/ DESTINATION .)
 

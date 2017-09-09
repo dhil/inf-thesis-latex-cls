@@ -20,6 +20,12 @@ You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/pr
 
 **Note** all usage of the university's crest or logos is subject to the [brand guidelines](http://www.ed.ac.uk/communications-marketing/resources/university-brand). Make sure you follow the brand guidelines!
 
+## Other useful logos
+
+https://www.epsrc.ac.uk/about/logos/
+http://web.inf.ed.ac.uk/infweb/admin/school-brand
+http://web.inf.ed.ac.uk/infweb/student-services/cdt/ppar/resources-guidelines/ppar-logos 
+
 ## Local installation
 
 ## Using `make`

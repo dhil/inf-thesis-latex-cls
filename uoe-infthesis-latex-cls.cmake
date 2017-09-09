@@ -5,9 +5,9 @@ include(CMakeParseArguments)
 set(_UOE_INFTHESIS_CURRENT_DIR "${CMAKE_CURRENT_LIST_DIR}/src")
 
 #.rst:
-# This creates targets that install the LaTeX class for an University of
-# Edinburgh, School of Informatics thesis class (infthesis) along with the
-# relevant crest logos.
+# This module defines commands that allow the installation of the LaTeX class
+# for a University of Edinburgh, School of Informatics thesis class (infthesis)
+# along with the relevant crest logos.
 #
 # Usage:
 #
@@ -17,8 +17,8 @@ set(_UOE_INFTHESIS_CURRENT_DIR "${CMAKE_CURRENT_LIST_DIR}/src")
 #     add_uoe_eushield(TARGET my-eushield)
 #
 # Each command creates a directory with the targets name, under which a
-# directory named "uoe" is placed with all the relevant files per target. This
-# subdirectory can by used to install these files to the desired location using
+# directory named "uoe" is placed with all the relevant files per target. These
+# directories can by used to install these files to the desired location using
 # an install() command.
 #
 

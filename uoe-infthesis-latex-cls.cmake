@@ -62,6 +62,8 @@ function(add_uoe_eushield)
 
   set(DOWNLOAD_SCRIPT
     "${CMAKE_CURRENT_BINARY_DIR}/${ADD_UOE_EUSHIELD_TARGET}-download.cmake")
+  file(REMOVE ${DOWNLOAD_SCRIPT})
+
   set(EUSHIELD_DEST_LOGOS)
   foreach(logo ${EUSHIELD_LOGOS})
     file(APPEND ${DOWNLOAD_SCRIPT}

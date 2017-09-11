@@ -35,9 +35,9 @@ Make sure to follow the brand guidelines as stated on each site!
 
 ## Local installation
 
-## LaTeX class and main crest
+### LaTeX class and main crest
 
-### Using `make`
+#### Using `make`
 
 To install the thesis class file (in the `src` dir):
 
@@ -59,7 +59,7 @@ For the extra logos, 3 targets are declared and can be used as follows:
 Each target creates a corresponding subdirectory under `logos/` with all the relevant logos (in vector format). The
 installation directory can be influence using the `DESTDIR` variable as stated [here](https://www.gnu.org/prep/standards/html_node/DESTDIR.html).
 
-### Using `cmake`
+#### Using `cmake`
 
 - `mkdir build && cd build`
 - `cmake [path to this source dir] -DCMAKE_INSTALL_PREFIX=[path to install dir]`

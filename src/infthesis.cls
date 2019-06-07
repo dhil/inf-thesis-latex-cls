@@ -2,14 +2,14 @@
 %%    File : infthesis.cls    (LaTeX2e class file)
 %%  Author : Version 3.8 updated by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
 %%           Version 3.7 updated by Jennifer Oxley <joxley@inf.ed.ac.uk>
-%%           Version 3.6 by Charles Sutton <csutton@inf.ed.ac.uk>  
+%%           Version 3.6 by Charles Sutton <csutton@inf.ed.ac.uk>
 %%           Version 3.5 by Vasilis Vasaitis <v.vasaitis@sms.ed.ac.uk>
 %%           Version 3.4.1 updated by Tiejun Ma (t.j.ma@ed.ac.uk)
 %%           Version 3.0 by Mary Ellen Foster <mef@cogsci.ed.ac.uk>
-%%           Original version by Martin Reddy (mxr@dcs.ed.ac.uk) 
+%%           Original version by Martin Reddy (mxr@dcs.ed.ac.uk)
 %% Version : 3.8
 %% Updates : 1.0 [9/11/95] - initial release.
-%%           1.1 [24/4/96] - fixed bibliography bug caused by new report.cls 
+%%           1.1 [24/4/96] - fixed bibliography bug caused by new report.cls
 %%           1.2 [13/5/96] - \dedication & \thesiscaption[]
 %%           1.3 [28/5/96] - abbrevs, parskip, minitoc fix, \headfootstyle
 %%           1.4 [12/7/96] - appendices okay now, \cleardoublepage's added
@@ -58,7 +58,7 @@
 %% - graphics for including the (scaled) logo on the front page
 %% - xspace if abbreviations are used
 \usepackage[paper=a4paper]{geometry}
-\RequirePackage{ifthen,%  
+\RequirePackage{ifthen,%
     graphics,%
     xspace,
     eushield}
@@ -76,7 +76,7 @@
 %% Default values for various fields
 \newcommand{\@degreetext}{}
 \newcommand{\@infschool}{School of Informatics}
-\newcommand{\@university}{University of Edinburgh}
+\newcommand{\@university}{The University of Edinburgh}
 \newcommand{\@chapteralignment}{\centering}
 \newcommand{\@chapterfont}{}
 \newcommand{\@thesisside}{}

@@ -559,16 +559,16 @@ Processing}}
 
 \newenvironment{acknowledgements}
    {\renewcommand{\abstractname}{Acknowledgements}\begin{mainabs}}
-   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}   
+   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
 
 \newenvironment{declaration}
    {\renewcommand{\abstractname}{Declaration}\begin{mainabs}}
-   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}   
+   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
 
 \newcommand{\standarddeclaration}{
    \begin{declaration}
    I declare that this thesis was composed by myself,
-   that the work contained herein is my own 
+   that the work contained herein is my own
    except where explicitly stated otherwise in the text,
    and that this work has not been submitted for any other degree or
    professional qualification except as specified.\par
@@ -578,6 +578,10 @@ Processing}}
 
 \newenvironment{preface}
    {\renewcommand{\abstractname}{Preface}\begin{mainabs}}
+   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
+
+\newenvironment{laysummary}
+   {\renewcommand{\abstractname}{Lay summary}\begin{mainabs}}
    {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
 
 %%

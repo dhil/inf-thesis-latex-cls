@@ -561,9 +561,10 @@ Processing}}
    {\renewcommand{\abstractname}{Acknowledgements}\begin{mainabs}}
    {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
 
-\newenvironment{declaration}
-   {\renewcommand{\abstractname}{Declaration}\begin{mainabs}}
-   {\end{mainabs}\renewcommand{\abstractname}{Abstract}}
+\newenvironment{declaration}[1][\@author]
+   {\def\AuthorName{#1}\renewcommand{\abstractname}{Declaration}\begin{mainabs}}
+   {\par\vspace{0.5in}\raggedleft (\em \AuthorName)\end{mainabs}%
+   \renewcommand{\abstractname}{Abstract}}
 
 \newcommand{\standarddeclaration}{
    \begin{declaration}
@@ -571,8 +572,7 @@ Processing}}
    that the work contained herein is my own
    except where explicitly stated otherwise in the text,
    and that this work has not been submitted for any other degree or
-   professional qualification except as specified.\par
-   \vspace{1in}\raggedleft({\em \@author\/})
+   professional qualification except as specified.
    \end{declaration}
 }
 

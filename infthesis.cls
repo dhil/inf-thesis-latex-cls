@@ -181,7 +181,7 @@ Processing}}
 \DeclareOption{mscres}{\@researchdegree{Master of Science by Research}}
 
 \def\@taughtdegree#1#2{%
-    \renewcommand{\@degreetext}{#1 \\ 
+    \renewcommand{\@degreetext}{#1 \\
     \ifx\@empty#2
         % \PackageWarning{infthesis}{No course/school specified for taught
         % degree}
@@ -207,7 +207,7 @@ Processing}}
     \setboolean{sansheadings}{false}}
 
 %% Sidedness, openright-ness, and font size (so that the draft option can
-%% override them as needed. 
+%% override them as needed.
 \DeclareOption{twoside}{\renewcommand{\@thesisside}{twoside}}
 \DeclareOption{oneside}{\renewcommand{\@thesisside}{oneside}}
 \DeclareOption{openany}{\renewcommand{\@thesisopen}{openany}}
@@ -260,7 +260,7 @@ Processing}}
 
 %% Set default options and process the ones we were given.
 \ExecuteOptions{phd,centerchapter,romanprepages,%
-    sansheadings,openright,oneside,12pt,timesfonts} 
+    sansheadings,openright,oneside,12pt,timesfonts}
 \ProcessOptions
 
 %%
@@ -646,7 +646,7 @@ Processing}}
         }\vspace{3cm}
         {\Large\itshape \@author \par}\vspace{3cm}
         {\large \@degreetext \par \@submityear \par}
-        \vskip 1cm 
+        \vskip 1cm
         \ifthenelse{\equal{\@graduationdate}{}}{}
            {{\large \ttfamily (Graduation date: \@graduationdate)}}
         \end{center}
@@ -664,7 +664,7 @@ Processing}}
             {\resizebox{30mm}{!}{\includeshield}\\\vfill}
             {}
         {\large \@degreetext \par \@submityear \par}
-        \vskip 1cm 
+        \vskip 1cm
         \ifthenelse{\equal{\@graduationdate}{}}{}
            {{\large \ttfamily (Graduation date: \@graduationdate)}}
         \end{center}

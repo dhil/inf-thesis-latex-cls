@@ -1,19 +1,52 @@
 # LaTeX class for Informatics theses
-This LaTeX class provides a document class for typesetting Informatics dissertations. 
+This LaTeX class provides a document class for typesetting Informatics
+dissertations.
 
-It is a fork of `infthesis.cls` as found on Informatics DICE machines, however I have patched the class in various ways to make it more flexible. 
-For the original class file and a basic usage example, look [here](http://www.inf.ed.ac.uk/systems/tex/informatics/infthesis).
+This is a fork of the `infthesis.cls` file as found on Informatics
+DICE machines, however, this class file has been patched in various
+ways to make it more flexible.  Checkout the [computing support
+website](http://www.inf.ed.ac.uk/systems/tex/informatics/infthesis)
+for instructions on how to obtain the original class file and a basic
+usage example.
+
+## Changes against upstream
+
+This class file contains the following changes over the original class
+file:
+
+* Listing of multiple institutions, e.g. using
+  `\documentclass[phd,lfcs,icsa]{infthesis}` lists both LFCS and ICSA
+  as institutions on the titlepage.
+* Document class options for listing affiliated CDT alongside
+  institution on titlepage. The following three CDTs are available:
+  Data Science (`cdtds`), Pervasive Paralleism (`cdtppar`), and
+  Robotics and Autonomous Systems (`cdtras`).
+* Lay summary environment. Use `\begin{laysummary}\end{laysummary}` to
+  add a lay summary page.
+* Automatic insertion of author names in custom declarations,
+  e.g. `\begin{declaration}\end{declaration}` will insert the author
+  name like `\standarddeclaration` (aside: `\standarddeclaration` is
+  now implemented in terms of the `declaration` environment).
 
 ## Dependencies
-The document class requires the following packages:
- * ifthen
- * graphics
- * xspace
- * eushield
- 
-where *eushield* is the only nonstandard LaTeX package. The package provides various versions of the university's crest. The [eushield][eushield.sty] package is not distributed along with this class. 
 
-You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty). You must also obtain the following necessary copies of the university crest:
+The document class requires the following packages:
+
+* ifthen
+* graphics
+* xspace
+* eushield
+
+The only nonstandard LaTeX package is *eushield*, which provides
+various versions of the university's crest. The
+[eushield][eushield.sty] package is not distributed along with this
+class.
+
+You can obtain a copy of it via [Informatics
+DReaM](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty). For
+the package to work correctly you should also obtain the following
+necessary copies of the university crest:
+
 * eushield.[[eps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.eps)]
 * eushield-normal.[[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.pdf)][[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.ps)]
 * eushield-noback.[[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-noback.pdf)][[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-noback.ps)]
@@ -21,70 +54,68 @@ You can obtain a copy of it via [Informatics DReaM](http://dream.inf.ed.ac.uk/pr
 * eushield-twocolour.[[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-twocolour.pdf)][[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-twocolour.ps)]
 * eushield-fullcolour.[[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-fullcolour.pdf)][[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-fullcolour.ps)]
 
-**Note** all usage of the university's crest or logos is subject to the [brand guidelines](http://www.ed.ac.uk/communications-marketing/resources/university-brand). Make sure you follow the brand guidelines!
+**Note** usage of the university's crest or logos is subject to the
+[brand
+guidelines](http://www.ed.ac.uk/communications-marketing/resources/university-brand). Please
+make sure you follow the brand guidelines.
 
-## Other useful logos
+### Other useful logos
 
-Other commonly useful logos:
+You may want to use some of the common logos with `infthesis.cls`
 
 * [UoE Informatics logos](http://web.inf.ed.ac.uk/infweb/admin/school-brand)
 * [UoE CDT PPar logos](http://web.inf.ed.ac.uk/infweb/student-services/cdt/ppar/resources-guidelines/ppar-logos)
 * [EPSRC logos](https://www.epsrc.ac.uk/about/logos)
 
-Make sure to follow the brand guidelines as stated on each site!
+Usage is subject to the brand guidelines as stated on each
+site. Please make sure you follow them.
 
-## Local installation
+## Simple local installation
 
-### LaTeX class and main crest
+This class file is bundled with an `Makefile` installation script. To
+install the class file
 
-#### Using `make`
+```shell
+$ make install
+```
 
-To install the thesis class file (in the `src` dir):
+To download and install the required `eushield` type
 
-`make install`
+```shell
+$ make install-eushield
+```
 
-To install the crest and logos (in the `src` dir):
+Use the following command to acquire and install the common logos
 
-`make install-eushield`
+```shell
+$ make install-logo-{inf,cdtppar,epsrc}
+```
 
-Both above commands will place all the relevant files under a `.texmf` directory in the current user's `HOME` directory
-and will also invoke `texhash` in order to update the search paths.
+### Specifying installation directory
 
-For the extra logos, 3 targets are declared and can be used as follows:
+By default the class file, eushield, and logos are installed under
+`$HOME/.texmf`. You may change the installation directory by setting
+the `INSTDIR` variable. For example, to install the class file under
+the directory `foo` type
 
-- `make install-logo-inf`
-- `make install-logo-cdtppar`
-- `make install-logo-epsrc`
+```shell
+$ INSTDIR=foo make install
+```
 
-Each target creates a corresponding subdirectory under `logos/` with all the relevant logos (in vector format). The
-installation directory can be influence using the `DESTDIR` variable as stated [here](https://www.gnu.org/prep/standards/html_node/DESTDIR.html).
+## Uninstallation
 
-#### Using `cmake`
+Each installation rule has a corresponding uninstallation rule. For
+example you can use `uninstall` rule to uninstall the class file from
+its default installation location, i.e.
 
-- `mkdir build && cd build`
-- `cmake [path to this source dir] -DCMAKE_INSTALL_PREFIX=[path to install dir]`
-- `make && make install`
-- `texhash [path to install dir]`
+```shell
+$ make uninstall
+```
 
-To match the `make` based installation, `texhash` must be invoked manually, but it allows for greater flexibility on the
-selection of the target directory.
+**Note** if you used a custom installation, then you should set
+`INSTDIR` before uninstalling. For example, if you installed the class
+file under the directory `foo` then you should `INSTDIR=foo`, i.e.
 
-Moreover, the `cmake` file `uoe-infthesis-latex-cls.cmake` allows the integration of this repository as a submodule, 
-allowing the creation of targets with the relevant files as shown in this project's `CMakeLists.txt` file. Using this
-method requires that the handling of the paths for LaTeX will have to be performed separately. For an example have a
-look [here](https://github.com/compor/uoe-inf-thesis-skeleton).
-
-The commands defined are:
-
-- `add_uoe_eushield`
-- `add_uoe_infthesis`
-
-For the extra logos, the submodule `uoe-logos-extra.cmake` has to be included in your project. The commands defined are:
-
-- `add_uoe_inf_logos`
-- `add_uoe_cdtppar_logos`
-- `add_uoe_epsrc_logos`
-
-
-[eushield.sty]: http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty
-
+```shell
+$ INSTDIR=foo make uninstall
+```

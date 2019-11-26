@@ -1,13 +1,15 @@
 %%
 %%    File : infthesis.cls    (LaTeX2e class file)
-%%  Author : Version 3.8 updated by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
+%%  Author : Version 3.9 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
+%%           Version 3.8u by Sharon Goldwater <sgwater@inf.ed.ac.uk>
+%%           Version 3.8 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
 %%           Version 3.7 updated by Jennifer Oxley <joxley@inf.ed.ac.uk>
 %%           Version 3.6 by Charles Sutton <csutton@inf.ed.ac.uk>
 %%           Version 3.5 by Vasilis Vasaitis <v.vasaitis@sms.ed.ac.uk>
 %%           Version 3.4.1 updated by Tiejun Ma (t.j.ma@ed.ac.uk)
 %%           Version 3.0 by Mary Ellen Foster <mef@cogsci.ed.ac.uk>
 %%           Original version by Martin Reddy (mxr@dcs.ed.ac.uk)
-%% Version : 3.8
+%% Version : 3.9
 %% Updates : 1.0 [9/11/95] - initial release.
 %%           1.1 [24/4/96] - fixed bibliography bug caused by new report.cls
 %%           1.2 [13/5/96] - \dedication & \thesiscaption[]
@@ -34,7 +36,10 @@
 %%           3.6 [15/03/2012] - addition to support the MInf degree
 %%           3.7 [07/02/2013] - fix MInf definition
 %%           3.8 [19/12/2015] - Made institute options more flexible. It is possible to add multiple institutes now.
-%%                              Added institute options for the three CDTs
+                   %%           Added institute options for the three CDTs
+%%           3.8u[06/06/2019] - added support for MSc degrees:
+%%                              adi, datasci, di, cyber
+%%           3.9 [26/11/2019] - Automatically insert author name in custom declarations.
 
 
 %% This file contains a class definition, infthesis, for the LaTeX2e
@@ -45,7 +50,7 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
-\ProvidesClass{infthesis}[2015/12/19 v3.8 School of Informatics Thesis Class]
+\ProvidesClass{infthesis}[2019/11/26 v3.9 School of Informatics Thesis Class]
 
 
 %%
@@ -140,6 +145,7 @@ Processing}}
      \expandafter\def\expandafter\@institute\expandafter{\@institute{\\}#1}
   \fi
 }
+\DeclareOption{adi}{\gdef\@mscdegree{Advanced Design Informatics}}
 \DeclareOption{aiai}{\addinstitute{Artificial Intelligence Applications Institute}}
 \DeclareOption{cisa}{\addinstitute{Centre for Intelligent Systems and their Applications}}
 \DeclareOption{icsa}{\addinstitute{Institute of Computing Systems Architecture}}
@@ -147,6 +153,12 @@ Processing}}
 \DeclareOption{ilcc}{\addinstitute{Institute for Language, Cognition and Computation}}
 \DeclareOption{ipab}{\addinstitute{Institute of Perception, Action and Behaviour}}
 \DeclareOption{lfcs}{\addinstitute{Laboratory for Foundations of Computer Science}}
+
+\DeclareOption{cyber}{\gdef\@mscdegree{Cyber Security, Privacy and Trust}}
+\DeclareOption{datasci}{\gdef\@mscdegree{Data Science}}
+\DeclareOption{di}{\gdef\@mscdegree{Design Informatics}}
+\DeclareOption{dsti}{\gdef\@mscdegree{Data Science, Technology, and Innovation}}
+
 \DeclareOption{cdtppar}{\addinstitute{CDT Pervasive Parallelism}}
 \DeclareOption{cdtds}{\addinstitute{CDT Data Science}}
 \DeclareOption{cdtras}{\addinstitute{CDT Robotics and Autonomous Systems}}
@@ -154,7 +166,7 @@ Processing}}
 % Degree
 
 \def\@researchdegree#1{%
-    \renewcommand{\@degreetext}{#1 \\ 
+    \renewcommand{\@degreetext}{#1 \\
     \ifx\@empty\@institute
         \PackageWarning{infthesis}{No institute specified for research
         degree}

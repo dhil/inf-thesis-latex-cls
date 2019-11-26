@@ -112,7 +112,7 @@ its default installation location, i.e.
 $ make uninstall
 ```
 
-**Note** if you used a custom installation, then you should set
+**Note** if you used a custom installation location, then you should set
 `INSTDIR` before uninstalling. For example, if you installed the class
 file under the directory `foo` then you should `INSTDIR=foo`, i.e.
 

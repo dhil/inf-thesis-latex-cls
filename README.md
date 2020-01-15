@@ -39,7 +39,7 @@ The document class requires the following packages:
 
 The only nonstandard LaTeX package is *eushield*, which provides
 various versions of the university's crest. The
-[eushield][eushield.sty] package is not distributed along with this
+eushield package is not distributed along with this
 class.
 
 You can obtain a copy of it via [Informatics

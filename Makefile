@@ -22,7 +22,7 @@ INSTDIR?=$(TEXMF)
 TEXINFTHESIS=$(INSTDIR)/uoe/informatics/infthesis
 
 TEXEUSHIELD=$(INSTDIR)/uoe/informatics/eushield
-EUSHIELDURL=http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos
+EUSHIELDURL=https://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos
 EUSHIELD= \
 	eushield.sty eushield.eps \
 	eushield-normal.pdf eushield-normal.ps \

@@ -57,7 +57,7 @@ uninstall: $(TEXINFTHESIS)/infthesis.cls
 	texhash --verbose $(INSTDIR) && \
 	echo "Uninstallation complete." || echo "Uninstallation failed."
 	@echo "Attempting to removing directory structure."
-	@rmdir -v -p $(TEXINFTHESIS) && true || true
+	@rmdir -v -p $(TEXINFTHESIS) || true
 
 install-eushield:
 	@mkdir -v -p $(TEXEUSHIELD)
@@ -74,8 +74,8 @@ uninstall-eushield:
 		rm -v $(TEXEUSHIELD)/$(dep) && \
 		echo "Uninstallation of $(dep) complete." || echo "Uninstallation of $(dep) failed." ; \
 	)
-	texhash $(INSTDIR) && \
-	@rmdir -p -v $(TEXEUSHIELD) && true || true
+	rmdir -p -v $(TEXEUSHIELD) || true
+	texhash $(INSTDIR)
 
 install-logo-inf:
 	@mkdir -v -p $(INFLOGODIR)
@@ -91,7 +91,7 @@ uninstall-logo-inf:
 		rm -v $(INFLOGODIR)/$(dep) && \
 		echo "Uninstallation of $(dep) complete." || echo "Uninstallation of $(dep) failed." ; \
 	)
-	@rmdir -v -p $(INFLOGODIR) && true || true
+	@rmdir -v -p $(INFLOGODIR) || true
 
 
 install-logo-cdtppar:
@@ -105,10 +105,10 @@ install-logo-cdtppar:
 uninstall-logo-cdtppar:
 	$(foreach dep, $(CDTPPARLOGO), \
 		echo "Uninstalling $(dep)..." && \
-		curl -o $(CDTPPARLOGODIR)/$(dep) -O $(CDTPPARURL)/$(dep) && \
+		rm -v $(CDTPPARLOGODIR)/$(dep) && \
 		echo "Uninstallation of $(dep) complete." || echo "Uninstallation of $(dep) failed." ; \
 	)
-	@rmdir -v -p $(CDTPPARLOGODIR) && true || true
+	@rmdir -v -p $(CDTPPARLOGODIR) || true
 
 install-logo-epsrc:
 	@mkdir -v -p $(EPSRCLOGODIR)
@@ -125,7 +125,7 @@ uninstall-logo-epsrc:
 		$(eval dep1 = $(word 1,$(subst :, ,$(dep)))) \
 		$(eval dep2 = $(word 2,$(subst :, ,$(dep)))) \
 		echo "Uninstalling $(dep2)..." && \
-		curl -o $(EPSRCLOGODIR)/$(dep2) -O $(EPSRCURL)/$(dep1) && \
+		rm -v $(EPSRCLOGODIR)/$(dep2) && \
 		echo "Uninstallation of $(dep2) complete." || echo "Uninstallation of $(dep2) failed." ; \
 	)
-	@rmdir -v -p $(EPSRCLOGODIR) && true || true
+	@rmdir -v -p $(EPSRCLOGODIR) || true

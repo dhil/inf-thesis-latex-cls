@@ -35,8 +35,8 @@
 %%                              versions of the geometry package
 %%           3.6 [15/03/2012] - addition to support the MInf degree
 %%           3.7 [07/02/2013] - fix MInf definition
-%%           3.8 [19/12/2015] - Made institute options more flexible. It is possible to add multiple institutes now.
-                   %%           Added institute options for the three CDTs
+%%           3.8 [19/12/2015] - Flexible institute options: support for listing multiple institutes
+%%                              added institute options for CDTs: cdtppar, cdtds, cdtras
 %%           3.8u[06/06/2019] - added support for MSc degrees:
 %%                              adi, datasci, di, cyber
 %%           3.9 [26/11/2019] - Automatically insert author name in custom declarations.

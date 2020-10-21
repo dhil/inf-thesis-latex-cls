@@ -118,3 +118,7 @@ file under the directory `foo` then you should `INSTDIR=foo`, i.e.
 ```shell
 $ INSTDIR=foo make uninstall
 ```
+
+---
+
+Status of links at last commit: [![Build Status](https://travis-ci.com/dhil/inf-thesis-latex-cls.svg?branch=master)](https://travis-ci.com/github/dhil/inf-thesis-latex-cls)

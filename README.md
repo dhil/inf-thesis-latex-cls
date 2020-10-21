@@ -38,12 +38,13 @@ The document class requires the following packages:
 * eushield
 
 The only nonstandard LaTeX package is *eushield*, which provides
-various versions of the university's crest. The
-eushield package is not distributed along with this
-class. You can obtain a copy of it via [Informatics
+various versions of the university's crest. The eushield package is
+not distributed along with this class. You can obtain a copy of it via
+[Informatics
 DReaM](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.sty). For
 the package to work correctly you should also obtain the following
-necessary copies of the university crest (see the next section for an automated installation):
+necessary copies of the university crest (see the next section for an
+automated installation):
 
 * eushield.[eps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield.eps)
 * eushield-normal.{[pdf](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.pdf),[ps](http://dream.inf.ed.ac.uk/projects/polyml/application/cover-letter/tex/logos/eushield-normal.ps)}

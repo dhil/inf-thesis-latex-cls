@@ -23,7 +23,7 @@ file:
   Robotics and Autonomous Systems (`cdtras`).
 * Lay summary environment. Use `\begin{laysummary}\end{laysummary}` to
   add a lay summary page.
-* Automatic insertion of author names in custom declarations,
+* Automatic insertion of author name in custom declarations,
   e.g. `\begin{declaration}\end{declaration}` will insert the author
   name like `\standarddeclaration` (aside: `\standarddeclaration` is
   now implemented in terms of the `declaration` environment).

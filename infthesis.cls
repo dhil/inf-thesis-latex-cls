@@ -40,6 +40,7 @@
 %%           3.8u[06/06/2019] - added support for MSc degrees:
 %%                              adi, datasci, di, cyber
 %%           3.9 [26/11/2019] - Automatically insert author name in custom declarations.
+%%           3.10[07/06/2021] - Added institute option for CDT NLP: cdtnlp.
 
 
 %% This file contains a class definition, infthesis, for the LaTeX2e
@@ -162,6 +163,7 @@ Processing}}
 \DeclareOption{cdtppar}{\addinstitute{CDT Pervasive Parallelism}}
 \DeclareOption{cdtds}{\addinstitute{CDT Data Science}}
 \DeclareOption{cdtras}{\addinstitute{CDT Robotics and Autonomous Systems}}
+\DeclareOption{cdtnlp}{\addinstitute{CDT Natural Language Processing}}
 
 % Degree
 

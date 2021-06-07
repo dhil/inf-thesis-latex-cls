@@ -1,6 +1,7 @@
 %%
 %%    File : infthesis.cls    (LaTeX2e class file)
-%%  Author : Version 3.9 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
+%%  Author : Version 3.10 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
+%%           Version 3.9 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
 %%           Version 3.8u by Sharon Goldwater <sgwater@inf.ed.ac.uk>
 %%           Version 3.8 by Daniel Hillerström <daniel.hillerstrom@ed.ac.uk>
 %%           Version 3.7 updated by Jennifer Oxley <joxley@inf.ed.ac.uk>
@@ -9,7 +10,7 @@
 %%           Version 3.4.1 updated by Tiejun Ma (t.j.ma@ed.ac.uk)
 %%           Version 3.0 by Mary Ellen Foster <mef@cogsci.ed.ac.uk>
 %%           Original version by Martin Reddy (mxr@dcs.ed.ac.uk)
-%% Version : 3.9
+%% Version : 3.10
 %% Updates : 1.0 [9/11/95] - initial release.
 %%           1.1 [24/4/96] - fixed bibliography bug caused by new report.cls
 %%           1.2 [13/5/96] - \dedication & \thesiscaption[]

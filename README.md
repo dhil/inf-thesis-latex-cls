@@ -18,9 +18,10 @@ file:
   `\documentclass[phd,lfcs,icsa]{infthesis}` lists both LFCS and ICSA
   as institutions on the titlepage.
 * Document class options for listing affiliated CDT alongside
-  institution on titlepage. The following three CDTs are available:
-  Data Science (`cdtds`), Pervasive Paralleism (`cdtppar`), and
-  Robotics and Autonomous Systems (`cdtras`).
+  institution on titlepage. The following four CDTs are available:
+  Data Science (`cdtds`), Pervasive Paralleism (`cdtppar`), Robotics
+  and Autonomous Systems (`cdtras`), and Natural Language Processing
+  (`cdtnlp`).
 * Lay summary environment. Use `\begin{laysummary}\end{laysummary}` to
   add a lay summary page.
 * Automatic insertion of author name in custom declarations,

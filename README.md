@@ -4,7 +4,7 @@ dissertations.
 
 This is a fork of the `infthesis.cls` file as found on Informatics
 DICE machines, however, this class file has been patched in various
-ways to make it more flexible.  Checkout the [computing support
+ways to make it more flexible.  See the [computing support
 website](http://www.inf.ed.ac.uk/systems/tex/informatics/infthesis)
 for instructions on how to obtain the original class file and a basic
 usage example.

@@ -46,7 +46,7 @@ EPSRCLOGO=white-out-sponsorship-logo:sponsor-wofullres.eps \
 					colour-sponsorship-logo-full-resolution:sponsorfullres.eps
 
 
-install: infthesis.cls
+install: infthesis.cls install-eushield
 	@mkdir -v -p $(TEXINFTHESIS) && \
 	cp -v infthesis.cls $(TEXINFTHESIS)/infthesis.cls && \
 	texhash --verbose $(INSTDIR) && \
@@ -61,10 +61,10 @@ uninstall: $(TEXINFTHESIS)/infthesis.cls
 
 install-eushield:
 	@mkdir -v -p $(TEXEUSHIELD)
-	$(foreach dep, $(EUSHIELD), \
-		echo "Installing $(dep)..." && \
-		curl -o $(TEXEUSHIELD)/$(dep) -O $(EUSHIELDURL)/$(dep) && \
-		echo "Installation of $(dep) complete." || echo "Installation of $(dep) failed." ; \
+	@$(foreach dep, $(EUSHIELD), \
+		echo -n "Installing $(dep)..." && \
+		cp eushield/$(dep) $(TEXEUSHIELD)/$(dep) && \
+		echo " success." || echo " failure." ; \
 	)
 	texhash $(INSTDIR)
 
